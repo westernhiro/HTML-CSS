@@ -1,0 +1,428 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"MS Ｐゴシック","MS PGothic",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+}
+
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none; 
+  }
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+
+/* --header-- */
+
+header {
+    position: absolute;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px;
+}
+
+.header-logo {
+    align-self: center;
+    transition: opacity 0.2s;
+}
+
+.header-logo-imag-pc {
+    display: block;
+    height: 20px;
+    width: auto;
+}
+
+.header-logo-imag-sp {
+    display: none;
+    height: 16px;
+    width: auto;
+}
+
+.header-nav-hamburger {
+    display: none;
+}
+   
+.header-nav-list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav-listitem {
+    margin-right: 45px;
+    text-align: center;
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+.header-nav-list :last-of-type {
+    margin-right: 0;
+}
+
+.header-nav-listitem-link span {
+    display: block;
+    color: #333;
+}
+
+.header-nav-listitem-link span:first-child {
+    font-family: "Lato",sans-serif;
+    font-size: 14px;
+}
+
+.header-nav-listitem-link span:last-child {
+    font-size: 10px;
+}
+
+.header-nav-listitem-button {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 40px;
+    flex-direction:column;
+    background-color: #f79214;
+    border-radius: 38px;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+@media screen and (width<=1080px) {
+    header {
+        z-index: 10;
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+   
+    .header-nav-hamburger {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        z-index: 10;
+        cursor: pointer;
+    }
+    
+    .header-nav-hamburger-line {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 10px;
+    }
+
+    .header-nav-hamburger :first-child {
+        top: 0;
+    }
+
+    .header-nav-hamburger :last-child {
+        top: 100%;
+    }
+
+    .header-nav-list {
+        display: none;    
+    }
+
+    .header-nav-listitem {
+        margin-right: 0;
+    }
+
+    .header-nav-listitem :last-of-type {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (width<=767px) {
+    header {
+            padding: 15px 0;
+    }
+
+    .header-logo-imag-pc {
+        display: none;
+    }
+    
+    .header-logo-imag-sp {
+        display: block;
+    }
+
+    .header-container {
+            max-width: 100%;
+            margin: 0 20px;
+    }
+    
+    .header-nav-list {
+            top:52px
+    }
+ }
+
+ @media screen and (767px<width) {
+   
+    .header-logo:hover {
+        opacity: 0.8;
+    }
+
+    .header-nav-listitem:hover {
+        opacity: 0.8;
+    }
+}
+
+
+/* --firstview-- */
+
+.firstview {
+    padding-top: 100px;
+    padding-bottom: 28px;
+    background-image: url(https:://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.firstview-main-image-sp {
+    display: none;
+    width: 100%;
+}
+
+.firstview-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 50px;
+    position: relative;
+}
+
+.firstview-content {
+    margin-bottom: 70px;
+    width: fit-content;
+}
+
+.firstview-content-title {
+    margin-bottom: 15px;
+    text-align: center;
+    color:#333;
+    font-family: "Lato",sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+.firstview-content-imags {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.firstview-content-imags img {
+    margin-right: 8px;
+}
+
+.firstview-content-imags :nth-of-type(2){
+    width: 40%;
+}
+
+.firstview-content-imags :nth-of-type(3) {
+    margin-right: 0;
+}
+
+.firstview-content-button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background-color: #f79214;
+    border-radius: 38px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+.firstview-caption {
+    color: #a2a2a4;
+    font-size: 12px;
+}
+
+.firstview-caption a {
+    color: #a2a2a4;
+}
+
+
+@media screen and (width<=767px) {
+    .firstview {
+        background-image: none;
+        padding: 0 0 35px;
+    }
+
+    .firstview-main-image-sp {
+        display: block;
+    }
+
+    .firstview-container {
+        margin-top: -45vw;
+        padding: 0 20px;
+    }
+
+    .firstview-content {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .firstview-content-title {
+        font-size: 25px;
+        line-height: 36px;
+
+    }
+
+    .firstview-content-imags {
+        justify-content: space-between;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .firstview-content-imags img {
+        width: 27.5%;
+    }
+
+    .firstview-content-imags img :nth-of-type(2) {
+        width: 40%;
+    }
+ }
+
+ @media screen and (767px<width) {
+    .firstview-content-button:hover {
+        opacity: 0.8;
+    }
+}
+
+
+/* --aboutwrapper-- */
+
+.aboutwrapper {
+    background-color: #f79214;
+    padding: 44px 0 ;
+}
+
+.about {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.about-video {
+    width: 50%;
+}
+
+.about-title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+}
+
+.about-title h2 {
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 54px;
+    letter-spacing: .1em;
+}
+
+.about-title h2 span {
+    font-family: "Lato",sans-serif;
+}
+
+.about-title p {
+    margin-bottom: 24px;
+    text-align: left;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.about__reskilling-logo img {
+    width: 158px;
+}
+
+@media screen and (width<=1024px) {
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-video {
+        margin-bottom: 16px;
+        width: 75%;
+    }
+
+    .about-title {
+        margin-left: 0;
+        width: 75%;
+    }
+
+    .about-title p {
+        margin-bottom: 32px;
+    }
+
+    .about__reskilling-logo {
+        margin: auto;
+    }
+}
+
+ @media screen and (width<=767px) {
+    .aboutwrapper {
+        padding: 30px 0;
+    }
+
+    .about {
+        padding: 0 20px;
+    }
+
+    .about-video {
+        width: 100%;
+    }
+    .about-title {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .about-title h2 span {
+        letter-spacing: 1px;
+    }
+}
